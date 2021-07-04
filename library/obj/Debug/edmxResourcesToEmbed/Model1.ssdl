@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="book">
+    <Key>
+      <PropertyRef Name="Book_Id" />
+    </Key>
+    <Property Name="Book_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Book_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Book_auther" Type="varchar" MaxLength="50" />
+    <Property Name="Published_by" Type="varchar" MaxLength="50" />
+    <Property Name="Book_tybe" Type="varchar" MaxLength="50" />
+    <Property Name="publiching_year" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BRecord">
+    <Key>
+      <PropertyRef Name="BorrowingRecord" />
+    </Key>
+    <Property Name="BorrowingRecord" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BorrowedBy" Type="varchar" MaxLength="50" />
+    <Property Name="BorrowerEmail" Type="varchar" MaxLength="50" />
+    <Property Name="BorrowingDate" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Register">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="LibraryModelStoreContainer">
+    <EntitySet Name="book" EntityType="Self.book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BRecord" EntityType="Self.BRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Register" EntityType="Self.Register" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

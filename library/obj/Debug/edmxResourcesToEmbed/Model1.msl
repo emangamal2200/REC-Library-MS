@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LibraryModelStoreContainer" CdmEntityContainer="LibraryEntities2">
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="LibraryModel.Register">
+        <MappingFragment StoreEntitySet="Register">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BRecords">
+      <EntityTypeMapping TypeName="LibraryModel.BRecord">
+        <MappingFragment StoreEntitySet="BRecord">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="BorrowingDate" ColumnName="BorrowingDate" />
+          <ScalarProperty Name="BorrowerEmail" ColumnName="BorrowerEmail" />
+          <ScalarProperty Name="BorrowedBy" ColumnName="BorrowedBy" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="BorrowingRecord" ColumnName="BorrowingRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="books">
+      <EntityTypeMapping TypeName="LibraryModel.book">
+        <MappingFragment StoreEntitySet="book">
+          <ScalarProperty Name="publiching_year" ColumnName="publiching_year" />
+          <ScalarProperty Name="Book_tybe" ColumnName="Book_tybe" />
+          <ScalarProperty Name="Published_by" ColumnName="Published_by" />
+          <ScalarProperty Name="Book_auther" ColumnName="Book_auther" />
+          <ScalarProperty Name="Book_name" ColumnName="Book_name" />
+          <ScalarProperty Name="Book_Id" ColumnName="Book_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
